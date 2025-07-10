@@ -2,9 +2,11 @@
   "name": "fixprom-fullstack",
   "version": "1.0.0",
   "scripts": {
-    "client": "npm --prefix client run dev",
+    "postinstall": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm --prefix frontend run dev",
     "server": "node backend/server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "start": "npm run server"
   },
   "devDependencies": {
     "concurrently": "^8.2.0"
