@@ -1,0 +1,85 @@
+.footer {
+  background-color: #111827;
+  color: white;
+  padding: 60px 20px 40px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logo-footer {
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.footer-description {
+  color: #9ca3af;
+  font-size: 14px;
+  max-width: 320px;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+}
+
+.footer-list a,
+.download-btn {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.footer-list a:hover,
+.download-btn:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1f2937;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}

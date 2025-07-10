@@ -1,0 +1,12 @@
+{
+  "name": "fixprom-fullstack",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "npm --prefix client run dev",
+    "server": "node backend/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
