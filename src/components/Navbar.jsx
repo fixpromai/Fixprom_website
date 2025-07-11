@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import fixpromLogo from "../assets/Fixprom.png"; // Adjust the path as necessary
+import fixpromLogo from "../assets/fixprom.png"; // Adjust the path as necessary
 
 export default function Navbar() {
   return (
