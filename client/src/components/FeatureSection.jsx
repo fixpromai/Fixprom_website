@@ -7,17 +7,18 @@ import img3 from '../assets/feature3.png';
 
 export default function FeatureSection() {
   return (
-    <section style={{ padding: '40px 20px', textAlign: 'center' }}>
-     <div style={{ marginBottom: '40px' }}>
-  <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '10px' }}>
-    Features
-  </h2>
-  <h3 style={{ fontSize: '20px', fontWeight: 'normal', color: '#555' }}>
-    One click. One perfect prompt.
-  </h3>
-</div>
-
-      
+    <section
+      id="features" 
+      style={{ padding: '40px 20px', textAlign: 'center' }}
+    >
+      <div style={{ marginBottom: '40px' }}>
+        <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '10px' }}>
+          Features
+        </h2>
+        <h3 style={{ fontSize: '20px', fontWeight: 'normal', color: '#555' }}>
+          One click. One perfect prompt.
+        </h3>
+      </div>
 
       <FeatureBlock
         title="Smart Prompt Helper"
