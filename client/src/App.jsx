@@ -1,5 +1,4 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import PlatformSection from './components/PlatformSection';
@@ -11,31 +10,15 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import RefundPolicy from './pages/RefundPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 import HowItWorks from './components/HowItWorks';
-import Signup from './components/Signup';
-import DashboardWrapper from './components/Dashboard';
-import ExtensionRedirect from './pages/ExtensionRedirect';
-
+import Signup from './components/Signup'; // ✅ Already imported
 
 function App() {
   const location = useLocation();
-
-  const [user, setUser] = useState(null);
-
-  // ✅ Load user from localStorage on mount
-  useEffect(() => {
-    const storedUser = localStorage.getItem("fixpromUser");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
-
-  // 👇 Hide navbar on these routes
-  const hideNavbarRoutes = ['/signup', '/dashboard'];
-  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
+  const isSignup = location.pathname === '/signup';
 
   return (
     <>
-      {!shouldHideNavbar && <Navbar user={user} />}
+      {!isSignup && <Navbar />}
 
       <Routes>
         <Route
@@ -56,8 +39,6 @@ function App() {
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={<DashboardWrapper user={user} />} />
-        <Route path="/extension-redirect" element={<ExtensionRedirect />} />
       </Routes>
     </>
   );

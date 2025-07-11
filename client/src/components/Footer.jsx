@@ -24,12 +24,7 @@ export default function Footer() {
                     <div>
                         <h3 className="footer-heading">Product</h3>
                         <ul className="footer-list">
-                            <li>
-  <a href="#features" className="footer-text" style={{ textDecoration: 'none', color: 'inherit' }}>
-    Features
-  </a>
-</li>
-
+                            <li><span className="footer-text">Features</span></li>
                             <li>
                                 <button
                                     className="download-btn"
