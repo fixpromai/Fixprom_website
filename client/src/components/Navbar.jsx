@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import fixpromLogo from "../assets/Fixprom.png";
+import fixpromLogo from "../assets/fixprom.png";
 import defaultProfilePic from "../assets/user.png";
 
 export default function Navbar() {
